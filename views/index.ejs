@@ -1,0 +1,36 @@
+<%- include('partials/header') -%>
+
+<div class="container mx-auto mt-10">
+    <div class="text-center">
+        <img src="https://i.imgur.com/d3BO9wj.png" width="300" height="200" alt="University of Inspira Logo" class="mx-auto mb-4" />
+        <h1 class="text-4xl font-bold mb-2">Welcome to the University of Inspira</h1>
+        <p class="text-xl mb-4">A place where learning meets excellence</p>
+    </div>
+    <div class="text-center mt-6">
+        <% if (locals.isAuthenticated) { %>
+            <p class="text-lg">You are logged in. <a href="/profile" class="underline text-blue-500">View your profile</a>.</p>
+        <% } else { %>
+            <p class="text-lg">You are not logged in. <a href="/login" class="underline text-blue-500">Login</a> to access more features.</p>
+        <% } %>
+    </div>
+    <div class="mt-10">
+        <h2 class="text-3xl font-semibold mb-4">Why Choose the University of Inspira?</h2>
+        <ul class="list-disc pl-6">
+            <li class="mb-2">World-class faculty and facilities</li>
+            <li class="mb-2">Diverse and inclusive community</li>
+            <li class="mb-2">Comprehensive curriculum and research opportunities</li>
+            <li class="mb-2">Strong alumni network</li>
+        </ul>
+    </div>
+    <div class="mt-10">
+        <h2 class="text-3xl font-semibold mb-4">Upcoming Events</h2>
+        <ul class="list-disc pl-6">
+            <li class="mb-2">Orientation Week - August 1-7</li>
+            <li class="mb-2">Homecoming - September 15</li>
+            <li class="mb-2">Career Fair - October 10</li>
+            <li class="mb-2">Winter Gala - December 20</li>
+        </ul>
+    </div>
+</div>
+
+<%- include('partials/footer') -%>
